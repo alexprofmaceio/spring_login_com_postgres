@@ -9,4 +9,7 @@ Os pacotes básicos usados neste projeto:
 - Thymeleaf
 - PostgreSQL Driver
 
-# TESTE
+# Descrição do Projeto
+O objetivo deste projeto é criar um modelo de login com recursos de "esqueci a senha", "novo usuário" e perfil de grupos de usuários usando o Spring boot e o banco de dados PostgreSQL para autenticação e validação do usuário.
+
+# Principais módulos
