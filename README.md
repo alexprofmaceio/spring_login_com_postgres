@@ -13,3 +13,6 @@ Os pacotes básicos usados neste projeto:
 O objetivo deste projeto é criar um modelo de login com recursos de "esqueci a senha", "novo usuário" e perfil de grupos de usuários usando o Spring boot e o banco de dados PostgreSQL para autenticação e validação do usuário.
 
 # Principais módulos
+
+- Mailtrap -> usado para envio de e-mail de teste para vários módulos do sistema.
+- 
