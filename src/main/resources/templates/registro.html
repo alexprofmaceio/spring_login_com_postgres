@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{Layout/usuario/layout}">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Exemplo de Login</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<div class="container"> 
+			<div class="panel panel-info" >
+				<div class="panel-heading">
+           	    	<div class="panel-title">Cadastro de Usuário</div>
+               	</div>
+				<br>
+                <div th:if="${aviso}" class="alert alert-danger">
+                	<p>Usuário já cadastrado!</p>
+                </div>
+	
+				<form th:action="@{/registrar}" th:object="${usuario}" method="POST">
+					<div class="form-group-row">
+						<label>Usuário: </label>
+						<input type="text" class="form-control" placeholder="Nome do usuário" th:field="*{nome}" required />
+					</div>
+
+					<div class="form-group-row">
+						<label>E-mail: </label>
+						<input type="email" class="form-control" placeholder="E-mail do usuário" th:field="*{login}" required />
+					</div>
+
+					<div class="form-group-row">
+						<label>Senha: </label>
+						<input type="password" class="form-control" placeholder="Senha do usuário" th:field="*{senha}" required />
+					</div>
+
+					<div class="form-group-row">
+						<button type="submit" class="btn btn-primary">Salvar </button>
+						<button class="btn btn-success" onclick="history.back()">Cancelar</button>
+						<br>
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
