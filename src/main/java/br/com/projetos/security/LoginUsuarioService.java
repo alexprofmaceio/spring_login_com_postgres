@@ -8,7 +8,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import br.com.projetos.models.Usuario;
 import br.com.projetos.repository.UsuarioRepository;
 
-public class NovoUsuarioService implements UserDetailsService{
+public class LoginUsuarioService implements UserDetailsService{
 
 	@Autowired
 	private UsuarioRepository ur;

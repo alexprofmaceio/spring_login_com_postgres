@@ -19,7 +19,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
 	@Bean
 	public UserDetailsService userDetailsService() {
-		return new NovoUsuarioService();
+		return new LoginUsuarioService();
 	}
 	
 	@Bean
@@ -41,7 +41,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 		auth
 			.authenticationProvider(authenticationProvider());
 	}
-	
+		
 	// Configurações de Autorizações
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
@@ -57,8 +57,6 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 			.antMatchers("/js/**", "/css/**").permitAll()
 			.anyRequest().authenticated()
 			.and()
-			.headers()
-				.frameOptions().sameOrigin().and() 
 			.formLogin()
 				.loginPage("/login").permitAll()
 					.defaultSuccessUrl("/")
